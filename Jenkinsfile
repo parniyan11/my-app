@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
                 bat 'docker build -t my-app .'
             }
         }
 
-        stage('Run') {
+        stage('Run Container') {
             steps {
                 bat 'docker run my-app'
             }
