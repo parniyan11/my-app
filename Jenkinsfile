@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t my-app .'
+                sh 'docker build -t my-app .'
             }
         }
 
         stage('Run Container') {
             steps {
-                bat 'docker run my-app'
+                sh 'docker run my-app'
             }
         }
     }
